@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | YRELIS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fdf6ee;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .menu-top {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;
+  flex-wrap: wrap;          /* Permite que se acomoden en múltiples líneas */
+  gap: 15px;
+  padding: 15px 10px;
+  background: rgba(255, 223, 178, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+    .menu-top a {
+      padding: 10px 16px;
+      font-size: 1em;
+      font-weight: bold;
+      background: linear-gradient(145deg, #ffdfb2, #d6a35f);
+      color: #3a2d1b;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.5), inset 0 0 10px #fff5e1;
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .menu-top a:hover {
+      transform: scale(1.05);
+      background: linear-gradient(145deg, #fff1d6, #e6b97c);
+    }
+
+    header {
+      background: rgba(30, 20, 10, 0.85);
+      padding: 100px 20px 40px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      margin-top: 60px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #ffddaa;
+      margin: 0;
+      text-shadow: 3px 3px 8px #000;
+    }
+
+    .contenido {
+      max-width: 800px;
+      margin: 40px auto 60px;
+      background-color: rgba(40, 20, 10, 0.85);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    h2 {
+      color: #ffe9c7;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #ffd699;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .icono {
+      margin-right: 8px;
+    }
+
+    .wsp-boton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #25d366;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      animation: zoomIn 0.8s ease-in-out;
+    }
+
+    .wsp-boton img {
+      width: 50px;
+      height: 50px;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.3); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(20, 10, 5, 0.85);
+      color: #c9b5a0;
+      font-size: 0.9em;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .contenido {
+        margin: 120px 15px 40px;
+        padding: 20px;
+      }
+
+      .wsp-boton img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú superior -->
+  <div class="menu-top">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Menú</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="nosotros.html">Nosotros</a>
+  </div>
+
+  <!-- Cabecera -->
+  <header>
+    <h1>Contáctanos</h1>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="contenido">
+    <h2>📍 Información de contacto</h2>
+    <p><i class="fas fa-map-marker-alt icono"></i><strong>Dirección:</strong> Pasaje Gamarra N° 149, La Victoria - Lima</p>
+    <p><i class="fab fa-facebook icono"></i><strong>Facebook:</strong> <a href="https://www.facebook.com/yreliscoffeebar" target="_blank">YrelisCoffeeBar</a></p>
+    <p><i class="fab fa-tiktok icono"></i><strong>TikTok:</strong> <a href="https://www.tiktok.com/@yreliscoffeebar" target="_blank">@yreliscoffeebar</a></p>
+    <p><i class="fab fa-whatsapp icono"></i><strong>WhatsApp:</strong> <a href="https://wa.me/51938168561" target="_blank">+51 938 168 561</a></p>
+    <p><i class="fas fa-truck icono"></i><strong>Delivery:</strong> En todo Gamarra. Escríbenos por WhatsApp para enviarte tu pedido.</p>
+  </div>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/51938168561?text=Hola%20Yrelis%20CoffeeBar%2C%20quiero%20hacer%20un%20pedido%20por%20delivery" target="_blank" class="wsp-boton">
+    <img src="WhatsApp.svg.webp" alt="WhatsApp" />
+  </a>
+
+  <!-- Pie de página -->
+  <footer>
+    &copy; 2025 Coffee Bar YRELIS. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>

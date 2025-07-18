@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos | YRELIS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #fdf6ee;
+      background: url('premium_photo-1667030986194-1ede16810993.jpg') no-repeat center center fixed;
+      background-size: cover;
+      animation: pageFade 1.2s ease;
+    }
+
+    @keyframes pageFade {
+      from {opacity: 0;} to {opacity: 1;}
+    }
+
+   .menu-top {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;
+  flex-wrap: wrap;          /* Permite que se acomoden en múltiples líneas */
+  gap: 15px;
+  padding: 15px 10px;
+  background: rgba(255, 223, 178, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+    .menu-top a {
+      padding: 10px 16px;
+      font-weight: bold;
+      background: linear-gradient(145deg, #ffdfb2, #d6a35f);
+      color: #3a2d1b;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4), inset 0 0 10px #fff5e1;
+      transition: transform 0.3s, background 0.3s;
+      display: inline-block;
+    }
+
+    .menu-top a:hover {
+      transform: scale(1.05);
+      background: linear-gradient(145deg, #fff1d6, #e6b97c);
+    }
+
+    header {
+      background: rgba(30,20,10,0.85);
+      padding: 90px 20px 40px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      margin-top: 60px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {transform: translateY(20px); opacity: 0;} 
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      color: #ffddaa;
+      text-shadow: 3px 3px 8px #000;
+    }
+
+    header h2 {
+      font-size: 1.2em;
+      color: #ffe9c7;
+      font-weight: 300;
+      margin-top: 10px;
+    }
+
+    .productos {
+      max-width: 1100px;
+      margin: 60px auto 80px;
+      background: rgba(40,20,10,0.88);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .productos h2 {
+      font-size: 2.2em;
+      color: #ffe9c7;
+      text-align: center;
+      text-shadow: 2px 2px 5px #000;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .productos h2::after {
+      content: '';
+      width: 70px;
+      height: 4px;
+      background: #ffddaa;
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+
+    .botones-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .botones-grid a {
+      background: linear-gradient(145deg, #e7c8a0, #fff2d0);
+      padding: 18px 12px;
+      font-size: 1.1em;
+      font-weight: bold;
+      border-radius: 15px;
+      color: #3a2d1b;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5), inset 0 0 12px #fff8e0;
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      animation: buttonFade 1s forwards;
+    }
+
+    .botones-grid a:nth-child(n) { animation-delay: calc(0.2s * var(--i)); }
+
+    @keyframes buttonFade {
+      from {opacity: 0; transform: translateY(20px);} 
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .botones-grid a:hover {
+      transform: translateY(-6px) scale(1.05);
+      background: linear-gradient(145deg, #fff7e4, #eacda5);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.6), inset 0 0 15px #fffaf0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(20,10,5,0.85);
+      color: #c9b5a0;
+      font-size: 0.9em;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.4);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      .productos { margin: 120px 15px 60px; padding: 25px; }
+      .productos h2 { font-size: 1.8em; }
+      .botones-grid a { font-size: 1em; padding: 14px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú superior -->
+  <div class="menu-top">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Menú</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="nosotros.html">Nosotros</a>
+  </div>
+
+  <!-- Cabecera -->
+  <header>
+    <h1>Productos YRELIS</h1>
+    <h2>Explora todo lo que tenemos para ti</h2>
+  </header>
+
+  <!-- Sección de productos -->
+  <div class="productos">
+    <h2>🍽️ Nuestro Menú</h2>
+    <div class="botones-grid">
+      <a href="coctelesclasicos.html" style="--i:1">🍸 Cócteles Clásicos</a>
+      <a href="refrescantes.html" style="--i:2">🥤 Refrescantes</a>
+      <a href="coctelesdeautor.html" style="--i:3">🍹 Coctelería de Autor</a>
+      <a href="happyhour.html" style="--i:4">⏰ Happy Hour</a>
+      <a href="desayunos.html" style="--i:5">🍳 Desayunos</a>
+      <a href="jugos.html" style="--i:6">🍊 Jugos Naturales</a>
+      <a href="antojitos.html" style="--i:7">🍟 Antojitos</a>
+      <a href="bebidascalientes.html" style="--i:8">☕ Bebidas Calientes</a>
+      <a href="dulces.html" style="--i:9">🍰 Dulces</a>
+      <a href="bebidasfrias.html" style="--i:10">🧊 Bebidas Frías</a>
+      <a href="piqueos.html" style="--i:11">🍢 Piqueos</a>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    &copy; 2025 Coffee Bar YRELIS. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jugos Naturales | YRELIS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('JUGOS.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fdf6ee;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+   .menu-top {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;
+  flex-wrap: wrap;          /* Permite que se acomoden en múltiples líneas */
+  gap: 15px;
+  padding: 15px 10px;
+  background: rgba(255, 223, 178, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+    .menu-top a {
+      padding: 10px 16px;
+      font-size: 1em;
+      font-weight: bold;
+      background: linear-gradient(145deg, #ffdfb2, #d6a35f);
+      color: #3a2d1b;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.5), inset 0 0 10px #fff5e1;
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .menu-top a:hover {
+      transform: scale(1.05);
+      background: linear-gradient(145deg, #fff1d6, #e6b97c);
+    }
+
+    header {
+      background: rgba(30, 20, 10, 0.85);
+      padding: 100px 20px 40px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      margin-top: 60px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #ffddaa;
+      margin: 0;
+      text-shadow: 3px 3px 8px #000;
+    }
+
+    .contenido {
+      max-width: 1000px;
+      margin: 40px auto 60px;
+      background: rgba(40, 20, 10, 0.85);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+      text-align: center;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .contenido h2 {
+      font-size: 2em;
+      color: #ffe9c7;
+      margin-bottom: 25px;
+    }
+
+    .grid-jugos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .item {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .item h3, .item p {
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .item h3 {
+      margin-top: 0;
+      color: #ffd8a8;
+      font-size: 1.3em;
+    }
+
+    .item p {
+      margin: 8px 0 0;
+      font-size: 1em;
+      color: #f9e2cc;
+    }
+
+    .especial {
+      background: linear-gradient(145deg, #ffe1a8, #ffb347);
+      color: #3a1d0e;
+      padding: 25px;
+      margin-top: 35px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6), inset 0 0 20px #fff5dc;
+    }
+
+    .especial h3 {
+      margin: 0 0 10px;
+      font-size: 1.5em;
+      text-shadow: 1px 1px 2px #fff;
+    }
+
+    .especial p {
+      margin: 5px 0;
+      font-size: 1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(20, 10, 5, 0.85);
+      color: #c9b5a0;
+      font-size: 0.9em;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .contenido {
+        margin: 120px 15px 40px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú superior -->
+  <div class="menu-top">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Menú</a>
+    <a href="#">Contacto</a>
+    <a href="#">Nosotros</a>
+  </div>
+
+  <!-- Cabecera -->
+  <header>
+    <h1>Jugos Naturales</h1>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="contenido">
+    <h2>Refresca tu día con fruta natural</h2>
+
+    <div class="grid-jugos">
+      <div class="item"><h3>Papaya</h3><p>S/ 7</p></div>
+      <div class="item"><h3>Piña</h3><p>S/ 7</p></div>
+      <div class="item"><h3>Fresa</h3><p>S/ 8</p></div>
+      <div class="item"><h3>Mango</h3><p>S/ 8</p></div>
+      <div class="item"><h3>Naranja</h3><p>S/ 10</p></div>
+      <div class="item"><h3>Surtido</h3><p>S/ 10</p></div>
+      <div class="item"><h3>Maracumango</h3><p>S/ 10</p></div>
+    </div>
+
+    <!-- Jugo Especial -->
+    <div class="especial">
+      <h3>🍓 Jugo Especial</h3>
+      <p><strong>Precio base:</strong> S/ 12</p>
+      <p>➕ Agrega <strong>leche</strong>: + S/ 2</p>
+      <p>❄ Hazlo <strong>ICE</strong>: + S/ 2</p>
+      <p style="margin-top: 10px;"><strong>Total con ambos extras:</strong> S/ 14</p>
+      <p>¡Disfruta el sabor de la fruta fresca!</p>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    &copy; 2025 Coffee Bar YRELIS. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>

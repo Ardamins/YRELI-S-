@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>☕ Inicio | YRELIS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fdf6ee;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .menu-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px 10px;
+      background: rgba(255, 223, 178, 0.95);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .menu-top a {
+      padding: 12px 18px;
+      font-size: 1em;
+      font-weight: bold;
+      background: linear-gradient(145deg, #ffdfb2, #d6a35f);
+      color: #3a2d1b;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), inset 0 0 10px #fff5e1;
+      transition: transform 0.3s ease, background 0.3s ease;
+      display: inline-block;
+    }
+
+    .menu-top a:hover {
+      transform: scale(1.08);
+      background: linear-gradient(145deg, #fff1d6, #e6b97c);
+    }
+
+    header {
+      background: rgba(30, 20, 10, 0.9);
+      padding: 120px 20px 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffe3b3;
+      box-shadow: 0 4px 10px #000;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #ffddaa;
+      margin: 0;
+      text-shadow: 3px 3px 8px #000;
+    }
+
+    header p {
+      font-size: 1.3em;
+      color: #ffe9c7;
+      margin-top: 10px;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .contenido {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: rgba(40, 20, 10, 0.85);
+      padding: 40px 25px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    .contenido h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #ffe9c7;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .contenido p {
+      font-size: 1.2em;
+      line-height: 1.7;
+      color: #f3e1cd;
+      padding: 0 10px;
+    }
+
+    .tarjeta {
+      margin-top: 40px;
+      background: linear-gradient(145deg, #ffedcc, #d4a774);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      animation: fadeIn 2s ease-in;
+    }
+
+    .tarjeta h3 {
+      color: #3a2d1b;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .tarjeta p {
+      color: #000;
+      font-weight: bold;
+    }
+
+    .estampillas {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .estampilla {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #fff3e1;
+      border: 2px dashed #c09b66;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1em;
+      color: #8a633d;
+      transition: background 0.3s;
+    }
+
+    .estampilla.llena {
+      background-color: #8a633d;
+      color: #fff;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(20, 10, 5, 0.85);
+      color: #c9b5a0;
+      font-size: 0.9em;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding-top: 160px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      .contenido {
+        margin: 100px 10px 40px;
+        padding: 25px 15px;
+      }
+
+      .contenido h2 {
+        font-size: 1.5em;
+      }
+
+      .contenido p {
+        font-size: 1em;
+      }
+
+      .tarjeta {
+        width: 95%;
+        padding: 20px;
+      }
+
+      .tarjeta h3 {
+        font-size: 1.4em;
+      }
+
+      .estampilla {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú superior fijo -->
+  <div class="menu-top">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Menú</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="nosotros.html">Nosotros</a>
+  </div>
+
+  <!-- Cabecera -->
+  <header>
+    <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/472751959_122099600714716169_6578532672702614723_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEj43-RnLgdcaEkzlwLzRj6txUXkFGx5Pq3FReQUbHk-sDmJysOt0AsYMBXUqQQQB-Su0FGyIvkAzO0lU2WgoBt&_nc_ohc=4UYpfW5HLPIQ7kNvwHBcNz2&_nc_oc=Adk82mmxhi3LW1VK_BMZqHYyJDkmWxuZ7E3zj37umO8whagVHNnxWa748Duw_9cFkOz7kuhw96UT2TPQI6mQ0_wT&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=cA62j1ATtRhFETwH8mjjyQ&oh=00_AfRvaZiXye_C97A3wVie6aKEXP8N5hzyu1yoUSgyHaaQkg&oe=687C5819" alt="Logo Yrelis" class="logo" />
+    <h1>YRELIS CoffeeBar</h1>
+    <p>Pasión por el café, amor por los momentos inolvidables</p>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="contenido">
+    <h2>Bienvenidos a YRELIS</h2>
+    <p>Disfruta de un ambiente acogedor, bebidas únicas y sabores que despiertan tus sentidos.  
+    Somos más que una cafetería: somos un lugar para compartir historias, risas y buenos recuerdos.</p>
+    
+    <div class="tarjeta">
+      <h3>☕ Tarjeta Cliente Frecuente</h3>
+      <p>Ven cada día a consumir café. Al completar 7 días ¡te regalamos uno!</p>
+      <div class="estampillas">
+        <div class="estampilla llena">✓</div>
+        <div class="estampilla llena">✓</div>
+        <div class="estampilla llena">✓</div>
+        <div class="estampilla">4</div>
+        <div class="estampilla">5</div>
+        <div class="estampilla">6</div>
+        <div class="estampilla">7</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    &copy; 2025 Coffee Bar YRELIS. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>

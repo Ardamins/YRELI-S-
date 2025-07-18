@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bebidas Calientes | YRELIS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('en-2025-las-bebidas-a-base-de-chocolate-y-cafe-seran-las-de--24260.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fdf6ee;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+.menu-top {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;
+  flex-wrap: wrap;          /* Permite que se acomoden en múltiples líneas */
+  gap: 15px;
+  padding: 15px 10px;
+  background: rgba(255, 223, 178, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+    .menu-top a {
+      padding: 10px 16px;
+      font-size: 1em;
+      font-weight: bold;
+      background: linear-gradient(145deg, #ffdfb2, #d6a35f);
+      color: #3a2d1b;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.5), inset 0 0 10px #fff5e1;
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    .menu-top a:hover {
+      transform: scale(1.05);
+      background: linear-gradient(145deg, #fff1d6, #e6b97c);
+    }
+
+    header {
+      background: rgba(30, 20, 10, 0.9);
+      padding: 100px 20px 40px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      margin-top: 60px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #ffddaa;
+      margin: 0;
+      text-shadow: 3px 3px 8px #000;
+    }
+
+    .contenido {
+      max-width: 1000px;
+      margin: 40px auto 60px;
+      background: rgba(40, 20, 10, 0.85);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+      text-align: center;
+    }
+
+    .contenido h2 {
+      font-size: 2em;
+      color: #ffe9c7;
+      margin-bottom: 25px;
+    }
+
+    .grid-bebidas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .item {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .item:hover {
+      transform: translateY(-5px) scale(1.03);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .item h3 {
+      margin-top: 0;
+      color: #ffd8a8;
+      font-size: 1.2em;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .item p {
+      margin: 8px 0 0;
+      font-size: 1em;
+      color: #f9e2cc;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(20, 10, 5, 0.85);
+      color: #c9b5a0;
+      font-size: 0.9em;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .contenido {
+        margin: 100px 15px 40px;
+        padding: 20px;
+      }
+
+      .item h3 {
+        font-size: 1em;
+      }
+
+      .item p {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú superior -->
+  <div class="menu-top">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Menú</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="nosotros.html">Nosotros</a>
+  </div>
+
+  <!-- Cabecera -->
+  <header>
+    <h1>Bebidas Calientes</h1>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="contenido">
+    <h2>☕ Para calentarte el alma</h2>
+    <div class="grid-bebidas">
+      <div class="item"><h3>Manzanilla</h3><p>S/ 6</p></div>
+      <div class="item"><h3>Anís</h3><p>S/ 6</p></div>
+      <div class="item"><h3>Té Verde</h3><p>S/ 6</p></div>
+      <div class="item"><h3>Hierba Luisa</h3><p>S/ 6</p></div>
+      <div class="item"><h3>Té Negro</h3><p>S/ 6<br><small>❄ ICE: +S/ 2 (S/ 8)</small></p></div>
+      <div class="item"><h3>Espresso</h3><p>S/ 6</p></div>
+      <div class="item"><h3>Infusión Frutos Rojos</h3><p>S/ 7</p></div>
+      <div class="item"><h3>Macchiato</h3><p>S/ 7</p></div>
+      <div class="item"><h3>Cortado</h3><p>S/ 7</p></div>
+      <div class="item"><h3>Flat White</h3><p>S/ 7</p></div>
+      <div class="item"><h3>Espresso Doble</h3><p>S/ 8</p></div>
+      <div class="item"><h3>Capuccino</h3><p>S/ 8</p></div>
+      <div class="item"><h3>Latte</h3><p>S/ 9</p></div>
+      <div class="item"><h3>Mocaccino</h3><p>S/ 11</p></div>
+      <div class="item"><h3>Chocolate Caliente</h3><p>S/ 12<br><small>🍊 +Naranja o Menta: +S/ 1 (S/ 13)</small></p></div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    &copy; 2025 Coffee Bar YRELIS. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
